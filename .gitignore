@@ -28,4 +28,9 @@ build/
 # Misc
 .DS_Store
 
+# Variables de entorno
 .env
+
+# Prisma
+dev.db
+dev.db-journal
