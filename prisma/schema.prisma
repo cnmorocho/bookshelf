@@ -13,8 +13,17 @@ datasource db {
 model Libro {
   id Int @id @default(autoincrement())
   titulo String @unique
-  autor String
-  ISBN String @unique
-  descripcion String
-  genero String
+  idAutor Int
+  ISBN String? @unique
+  descripcion String?
+  genero String?
+  autor Autor @relation(fields: [idAutor], references: [id])
+}
+
+model Autor {
+  id Int @id @default(autoincrement())
+  nombre String
+  apellido String
+  biografia String?
+  libros Libro[]
 }
