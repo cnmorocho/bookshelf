@@ -1,9 +1,9 @@
-import { Autor, PrismaClient } from "@prisma/client"
+import { Autor, PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export async function crear(autorNuevo: Autor) {
-    return prisma.autor.create({
-        data: autorNuevo
-    });
+export async function crear(autorNuevo: Autor): Promise<Autor> {
+	return prisma.autor.create({
+		data: autorNuevo,
+	});
 }

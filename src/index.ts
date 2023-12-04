@@ -1,5 +1,5 @@
 import * as express from 'express';
-import router from './routes'
+import router from './routes';
 
 const PORT = process.env.PORT;
 
@@ -8,6 +8,5 @@ app.use(express.json());
 app.use('/api', router);
 
 app.listen(PORT, () => {
-    console.log(`Servidor disponible en  http://localhost:${PORT}/`)
+	console.log(`Servidor disponible en  http://localhost:${PORT}/`);
 });
-

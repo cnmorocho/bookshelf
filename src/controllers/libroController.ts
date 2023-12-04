@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as LibroRepository from '../repositories/libroRepository'
+import * as LibroRepository from '../repositories/libroRepository';
 
 export async function obtener(req: Request, res: Response): Promise<void> {
 	try {
